@@ -2,14 +2,15 @@ package org.bukkit;
 
 import java.util.Map;
 
-import com.google.common.collect.Maps;
-
 import org.bukkit.block.BlockFace;
 import org.bukkit.potion.Potion;
+
+import com.google.common.collect.Maps;
 
 /**
  * A list of effects that the server is able to send to players.
  */
+@SuppressWarnings("deprecation")
 public enum Effect {
     /**
      * An alternate click sound.
