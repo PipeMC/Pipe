@@ -38,7 +38,8 @@ public class DyeColorTest {
         assertThat(byData, is(dye));
     }
 
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void getByWoolData() {
         byte data = dye.getWoolData();
 
@@ -46,7 +47,8 @@ public class DyeColorTest {
         assertThat(byData, is(dye));
     }
 
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void getByDyeData() {
         byte data = dye.getDyeData();
 
@@ -54,13 +56,15 @@ public class DyeColorTest {
         assertThat(byData, is(dye));
     }
 
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void getDyeDyeColor() {
         testColorable(new Dye(Material.INK_SACK, dye.getDyeData()));
         testColorable(new Dye(dye));
     }
 
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void getWoolDyeColor() {
         testColorable(new Wool(Material.WOOL, dye.getWoolData()));
     }

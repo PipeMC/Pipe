@@ -23,7 +23,8 @@ public class ConversationContextTest {
         assertEquals(null, context.getPlugin());
     }
 
-    @Test
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	@Test
     public void TestSessionData() {
         Conversable conversable = new FakeConversable();
         Map session = new HashMap();

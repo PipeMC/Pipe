@@ -6,7 +6,8 @@ import static org.junit.Assert.assertThat;
 import org.junit.Test;
 
 public class CoalTypeTest {
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void getByData() {
         for (CoalType coalType : CoalType.values()) {
             assertThat(CoalType.getByData(coalType.getData()), is(coalType));

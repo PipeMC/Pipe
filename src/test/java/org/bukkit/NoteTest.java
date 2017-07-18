@@ -16,14 +16,16 @@ import org.junit.Test;
 import com.google.common.collect.Lists;
 
 public class NoteTest {
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void getToneByData() {
         for (Note.Tone tone : Note.Tone.values()) {
             assertThat(Note.Tone.getById(tone.getId()), is(tone));
         }
     }
 
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void verifySharpedData() {
         for (Note.Tone tone : Note.Tone.values()) {
             if (!tone.isSharpable()) return;
@@ -33,7 +35,8 @@ public class NoteTest {
         }
     }
 
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void verifyUnknownToneData() {
         Collection<Byte> tones = Lists.newArrayList();
         for (int i = Byte.MIN_VALUE; i <= Byte.MAX_VALUE; i++) {
@@ -128,19 +131,22 @@ public class NoteTest {
         new Note(2, Note.Tone.F, true).sharped();
     }
 
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void testHighest() {
         Note note = new Note(2, Note.Tone.F, true);
         assertEquals(note.getId(), (byte)24);
     }
 
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void testLowest() {
         Note note = new Note(0, Note.Tone.F, true);
         assertEquals(note.getId(), (byte)0);
     }
 
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void doo() {
         for (int i = 1; i <= 24; i++) {
             Note note = new Note((byte) i);

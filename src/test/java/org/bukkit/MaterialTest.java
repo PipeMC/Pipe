@@ -14,7 +14,8 @@ public class MaterialTest {
         }
     }
 
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void getById() throws Throwable {
         for (Material material : Material.values()) {
             if (material.getClass().getField(material.name()).getAnnotation(Deprecated.class) != null) {
@@ -24,7 +25,8 @@ public class MaterialTest {
         }
     }
 
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void isBlock() {
         for (Material material : Material.values()) {
             if (material.getId() > 255) continue;
@@ -33,7 +35,8 @@ public class MaterialTest {
         }
     }
 
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void getByOutOfRangeId() {
         assertThat(Material.getMaterial(Integer.MAX_VALUE), is(nullValue()));
         assertThat(Material.getMaterial(Integer.MIN_VALUE), is(nullValue()));
@@ -44,7 +47,8 @@ public class MaterialTest {
         assertThat(Material.getMaterial(null), is(nullValue()));
     }
 
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void getData() {
         for (Material material : Material.values()) {
             Class<? extends MaterialData> clazz = material.getData();
@@ -58,7 +62,8 @@ public class MaterialTest {
         Material.matchMaterial(null);
     }
 
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void matchMaterialById() throws Throwable {
         for (Material material : Material.values()) {
             if (material.getClass().getField(material.name()).getAnnotation(Deprecated.class) != null) {

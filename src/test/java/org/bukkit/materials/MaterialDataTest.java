@@ -359,7 +359,8 @@ public class MaterialDataTest {
         }
     }
 
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void testComparator() {
         Comparator comparator = new Comparator();
         assertThat("Constructed with default comparator state", comparator.getItemType(), equalTo(Material.REDSTONE_COMPARATOR_OFF));
