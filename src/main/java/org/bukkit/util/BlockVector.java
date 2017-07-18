@@ -11,8 +11,9 @@ import org.bukkit.configuration.serialization.SerializableAs;
  */
 @SerializableAs("BlockVector")
 public class BlockVector extends Vector {
+	private static final long serialVersionUID = 6870626784668137557L;
 
-    /**
+	/**
      * Construct the vector with all components as 0.
      */
     public BlockVector() {

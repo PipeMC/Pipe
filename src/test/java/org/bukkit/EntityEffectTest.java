@@ -6,7 +6,8 @@ import static org.junit.Assert.assertThat;
 import org.junit.Test;
 
 public class EntityEffectTest {
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void getByData() {
         for (EntityEffect entityEffect : EntityEffect.values()) {
             assertThat(EntityEffect.getByData(entityEffect.getData()), is(entityEffect));

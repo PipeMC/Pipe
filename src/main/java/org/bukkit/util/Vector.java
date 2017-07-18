@@ -1,5 +1,6 @@
 package org.bukkit.util;
 
+import java.io.Serializable;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Random;
@@ -15,7 +16,7 @@ import org.bukkit.configuration.serialization.SerializableAs;
  * <code>clone()</code> in order to get a copy.
  */
 @SerializableAs("Vector")
-public class Vector implements Cloneable, ConfigurationSerializable {
+public class Vector implements Cloneable, ConfigurationSerializable, Serializable {
     private static final long serialVersionUID = -2657651106777219169L;
 
     private static Random random = new Random();

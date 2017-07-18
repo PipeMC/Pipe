@@ -6,7 +6,8 @@ import static org.junit.Assert.assertThat;
 import org.junit.Test;
 
 public class CropStateTest {
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void getByData() {
         for (CropState cropState : CropState.values()) {
             assertThat(CropState.getByData(cropState.getData()), is(cropState));

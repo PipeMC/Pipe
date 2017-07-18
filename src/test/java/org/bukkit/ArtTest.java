@@ -13,7 +13,8 @@ public class ArtTest {
         Art.getByName(null);
     }
 
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void getById() {
         for (Art art : Art.values()) {
             assertThat(Art.getById(art.getId()), is(art));

@@ -6,7 +6,8 @@ import static org.junit.Assert.assertThat;
 import org.junit.Test;
 
 public class DifficultyTest {
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void getByValue() {
         for (Difficulty difficulty : Difficulty.values()) {
             assertThat(Difficulty.getByValue(difficulty.getValue()), is(difficulty));

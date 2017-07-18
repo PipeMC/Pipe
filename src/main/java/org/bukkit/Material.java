@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.apache.commons.lang.Validate;
 import org.bukkit.map.MapView;
+import org.bukkit.material.Banner;
 import org.bukkit.material.Bed;
 import org.bukkit.material.Button;
 import org.bukkit.material.Cake;
@@ -34,6 +35,7 @@ import org.bukkit.material.MaterialData;
 import org.bukkit.material.MonsterEggs;
 import org.bukkit.material.Mushroom;
 import org.bukkit.material.NetherWarts;
+import org.bukkit.material.Observer;
 import org.bukkit.material.PistonBaseMaterial;
 import org.bukkit.material.PistonExtensionMaterial;
 import org.bukkit.material.PoweredRail;
@@ -62,12 +64,10 @@ import org.bukkit.material.Wool;
 
 import com.google.common.collect.Maps;
 
-import org.bukkit.material.Banner;
-import org.bukkit.material.Observer;
-
 /**
  * An enum of all material IDs accepted by the official server and client
  */
+@SuppressWarnings("deprecation")
 public enum Material {
     AIR(0, 0),
     STONE(1),
@@ -209,7 +209,7 @@ public enum Material {
     COMMAND(137, Command.class),
     BEACON(138),
     COBBLE_WALL(139),
-    FLOWER_POT(140, FlowerPot.class),
+	FLOWER_POT(140, FlowerPot.class),
     CARROT(141, Crops.class),
     POTATO(142, Crops.class),
     WOOD_BUTTON(143, Button.class),
@@ -454,7 +454,7 @@ public enum Material {
     CAULDRON_ITEM(380),
     EYE_OF_ENDER(381),
     SPECKLED_MELON(382),
-    MONSTER_EGG(383, 64, SpawnEgg.class),
+	MONSTER_EGG(383, 64, SpawnEgg.class),
     EXP_BOTTLE(384, 64),
     FIREBALL(385, 64),
     BOOK_AND_QUILL(386, 1),
