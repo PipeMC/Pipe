@@ -56,9 +56,10 @@ public class ExtendedRails extends Rails {
         return (byte) (getData() & 0x7);
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public void setDirection(BlockFace face, boolean isOnSlope) {
-        boolean extraBitSet = (getData() & 0x8) == 0x8;
+		boolean extraBitSet = (getData() & 0x8) == 0x8;
 
         if (face != BlockFace.WEST && face != BlockFace.EAST && face != BlockFace.NORTH && face != BlockFace.SOUTH) {
             throw new IllegalArgumentException("Detector rails and powered rails cannot be set on a curve!");

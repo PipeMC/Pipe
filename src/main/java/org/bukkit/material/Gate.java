@@ -18,16 +18,19 @@ public class Gate extends MaterialData implements Directional, Openable {
         super(Material.FENCE_GATE);
     }
 
-    public Gate(int type, byte data){
+    @SuppressWarnings("deprecation")
+	public Gate(int type, byte data){
         super(type, data);
     }
 
-    public Gate(byte data) {
+    @SuppressWarnings("deprecation")
+	public Gate(byte data) {
         super(Material.FENCE_GATE, data);
     }
 
+    @SuppressWarnings("deprecation")
     public void setFacingDirection(BlockFace face) {
-        byte data = (byte) (getData() &~ DIR_BIT);
+		byte data = (byte) (getData() &~ DIR_BIT);
 
         switch (face) {
             default:
@@ -48,7 +51,8 @@ public class Gate extends MaterialData implements Directional, Openable {
         setData(data);
     }
 
-    public BlockFace getFacing() {
+    @SuppressWarnings("deprecation")
+	public BlockFace getFacing() {
         switch (getData() & DIR_BIT) {
             case GATE_SOUTH:
                 return BlockFace.EAST;
@@ -63,12 +67,14 @@ public class Gate extends MaterialData implements Directional, Openable {
         return BlockFace.EAST;
     }
 
-    public boolean isOpen() {
+    @SuppressWarnings("deprecation")
+	public boolean isOpen() {
         return (getData() & OPEN_BIT) > 0;
     }
 
-    public void setOpen(boolean isOpen) {
-        byte data = getData();
+    @SuppressWarnings("deprecation")
+	public void setOpen(boolean isOpen) {
+		byte data = getData();
 
         if (isOpen) {
             data |= OPEN_BIT;

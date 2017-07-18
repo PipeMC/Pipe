@@ -50,7 +50,8 @@ public class Torch extends SimpleAttachableMaterialData {
      * @return BlockFace attached to
      */
     public BlockFace getAttachedFace() {
-        byte data = getData();
+        @SuppressWarnings("deprecation")
+		byte data = getData();
 
         switch (data) {
         case 0x1:
@@ -71,7 +72,8 @@ public class Torch extends SimpleAttachableMaterialData {
         }
     }
 
-    public void setFacingDirection(BlockFace face) {
+    @SuppressWarnings("deprecation")
+	public void setFacingDirection(BlockFace face) {
         byte data;
 
         switch (face) {

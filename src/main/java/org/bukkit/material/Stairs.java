@@ -45,7 +45,8 @@ public class Stairs extends MaterialData implements Directional {
      * @return the direction the stairs ascend towards
      */
     public BlockFace getAscendingDirection() {
-        byte data = getData();
+        @SuppressWarnings("deprecation")
+		byte data = getData();
 
         switch (data & 0x3) {
         case 0x0:
@@ -73,7 +74,8 @@ public class Stairs extends MaterialData implements Directional {
     /**
      * Set the direction the stair part of the block is facing
      */
-    public void setFacingDirection(BlockFace face) {
+    @SuppressWarnings("deprecation")
+	public void setFacingDirection(BlockFace face) {
         byte data;
 
         switch (face) {
@@ -110,7 +112,8 @@ public class Stairs extends MaterialData implements Directional {
      *
      * @return true if inverted (top half), false if normal (bottom half)
      */
-    public boolean isInverted() {
+    @SuppressWarnings("deprecation")
+	public boolean isInverted() {
         return ((getData() & 0x4) != 0);
     }
 
@@ -120,7 +123,8 @@ public class Stairs extends MaterialData implements Directional {
      * @param inv - true if step is inverted (top half), false if step is
      *     normal (bottom half)
      */
-    public void setInverted(boolean inv) {
+    @SuppressWarnings("deprecation")
+	public void setInverted(boolean inv) {
         int dat = getData() & 0x3;
         if (inv) {
             dat |= 0x4;

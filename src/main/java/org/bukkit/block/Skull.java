@@ -1,6 +1,5 @@
 package org.bukkit.block;
 
-import java.util.UUID;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.SkullType;
 
